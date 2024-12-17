@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Object and Array Example</title>
+</head>
+
+<body>
+    <h1>Simple Object and Array Example</h1>
+
+    <div>
+        <h2>Object</h2>
+        <pre id="objectDisplay"></pre>
+    </div>
+
+    <div>
+        <h2>Array</h2>
+        <pre id="arrayDisplay"></pre>
+    </div>
+
+    <div>
+        <h2>Join and Pop Functions</h2>
+        <pre id="joinPopDisplay"></pre>
+    </div>
+
+    <script>
+        // Creating an object
+        const myObject = {
+            name: "John Doe",
+            age: 30,
+            occupation: "Developer"
+        };
+
+        // Creating an array
+        const myArray = ["Alice", "Bob", "Charlie"];
+
+        // Displaying object values using keys
+        document.getElementById('objectDisplay').innerText =
+            `Name: ${myObject.name}\nAge: ${myObject.age}\nOccupation: ${myObject.occupation}`;
+
+        // Displaying array values using indices
+        document.getElementById('arrayDisplay').innerText =
+            myArray.map((item, index) => `Index ${index}: ${item}`).join('\n');
+
+        // Using join and pop functions
+        const joinedArray = myArray.join(', ');
+        const poppedElement = myArray.pop();
+        const finalArrayState = myArray.join(', ');
+
+        document.getElementById('joinPopDisplay').innerText =
+            `Joined Array: ${joinedArray}\nPopped Element: ${poppedElement}\nFinal Array State: ${finalArrayState}`;
+    </script>
+</body>
+
+</html>
